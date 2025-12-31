@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Wedding Photography Portfolio | Sripathi Thampi</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; background: #111; overflow-y: auto; }
-        
-        /* This container forces the 16:9 landscape aspect ratio */
-        .ratio-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio (9 / 16 = 0.5625) */
-            height: 0;
-            overflow: hidden;
+        /* Removes all margins and prevents the 'long page' scrolling issue */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #000; 
         }
-
-        .ratio-container iframe {
+        
+        /* Forces the iframe to be 100% of the viewport without stacking */
+        #canva-frame {
             position: absolute;
             top: 0;
             left: 0;
@@ -27,14 +27,9 @@
     </style>
 </head>
 <body>
-
-    <div class="ratio-container">
-        <iframe loading="lazy" 
-                src="https://www.canva.com/design/DAG80FqaHP4/EUz4T2g_mfffwJLpwnqqhg/view?embed" 
-                allowfullscreen="allowfullscreen" 
-                allow="fullscreen">
-        </iframe>
-    </div>
-
+    <iframe id="canva-frame" 
+            src="https://www.canva.com/design/DAG80FqaHP4/EUz4T2g_mfffwJLpwnqqhg/view?embed" 
+            allowfullscreen>
+    </iframe>
 </body>
 </html>
